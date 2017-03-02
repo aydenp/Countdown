@@ -1,4 +1,3 @@
-// DDTMColours.m
 //
 // Copyright (c) 2017 Dynastic Development
 //
