@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>title</key>
+	<string>Countdown</string>
+	<key>items</key>
+	<array>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>footerText</key>
+			<string>Replace the &quot;Press home to unlock&quot; text with a countdown to a date of your choice.</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>cellClass</key>
+			<string>PSSwitchTableCell</string>
+			<key>label</key>
+			<string>Enabled</string>
+			<key>key</key>
+			<string>Enabled</string>
+			<key>defaults</key>
+			<string>applebetas.ios.tweaks.countdown</string>
+			<key>default</key>
+			<true/>
+			<key>PostNotification</key>
+			<string>applebetas.ios.tweaks.countdown.changed</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>label</key>
+			<string>Event</string>
+			<key>footerText</key>
+			<string>Your event name should be formatted as if it were in the sentence &quot;4 days until EVENT.&quot;</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSLinkListCell</string>
+			<key>detail</key>
+			<string>PSListItemsController</string>
+			<key>label</key>
+			<string>Event Source</string>
+			<key>key</key>
+			<string>EventSource</string>
+			<key>validTitles</key>
+			<array>
+				<string>Custom Countdown</string>
+				<string>Next Calendar Event</string>
+			</array>
+			<key>validValues</key>
+			<array>
+				<integer>1</integer>
+				<integer>2</integer>
+				<integer>3</integer>
+			</array>
+			<key>defaults</key>
+			<string>applebetas.ios.tweaks.countdown</string>
+			<key>default</key>
+			<integer>1</integer>
+			<key>PostNotification</key>
+			<string>applebetas.ios.tweaks.countdown.changed</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSEditTextCell</string>
+			<key>label</key>
+			<string>Name</string>
+			<key>key</key>
+			<string>EventName</string>
+			<key>defaults</key>
+			<string>applebetas.ios.tweaks.countdown</string>
+			<key>default</key>
+			<string>My event</string>
+			<key>placeholder</key>
+			<string>My event</string>
+			<key>PostNotification</key>
+			<string>applebetas.ios.tweaks.countdown.changed</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSEditTextCell</string>
+			<key>cellClass</key>
+			<string>DDDatePickerCell</string>
+			<key>label</key>
+			<string>Date</string>
+			<key>key</key>
+			<string>EventDate</string>
+			<key>defaults</key>
+			<string>applebetas.ios.tweaks.countdown</string>
+			<key>default</key>
+			<string></string>
+			<key>PostNotification</key>
+			<string>applebetas.ios.tweaks.countdown.changed</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>footerText</key>
+			<string>Allow Counting Up lets the countdown go past the date. If enabled, it will count up from the date, like &quot;Event passed three days ago&quot;. If disabled, it will say something along the lines of &quot;Event has passed&quot;.</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSLinkListCell</string>
+			<key>detail</key>
+			<string>PSListItemsController</string>
+			<key>label</key>
+			<string>Countdown Format</string>
+			<key>key</key>
+			<string>CountdownFormat</string>
+			<key>validTitles</key>
+			<array>
+				<string>Full sentence (There are 3 days left until Event)</string>
+				<string>Short sentence (3 days until Event)</string>
+				<string>Condensed (Event: 1 day)</string>
+				<string>More condensed (Event: 1d)</string>
+			</array>
+			<key>shortTitles</key>
+			<array>
+				<string>Full sentence</string>
+				<string>Short sentence</string>
+				<string>Condensed</string>
+				<string>More condensed</string>
+			</array>
+			<key>validValues</key>
+			<array>
+				<integer>1</integer>
+				<integer>2</integer>
+				<integer>3</integer>
+				<integer>4</integer>
+			</array>
+			<key>defaults</key>
+			<string>applebetas.ios.tweaks.countdown</string>
+			<key>default</key>
+			<integer>1</integer>
+			<key>PostNotification</key>
+			<string>applebetas.ios.tweaks.countdown.changed</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>label</key>
+			<string>Allow Counting Up</string>
+			<key>key</key>
+			<string>AllowCountUp</string>
+			<key>defaults</key>
+			<string>applebetas.ios.tweaks.countdown</string>
+			<key>default</key>
+			<true/>
+			<key>PostNotification</key>
+			<string>applebetas.ios.tweaks.countdown.changed</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>label</key>
+			<string>Event Passed Wording</string>
+			<key>footerText</key>
+			<string>The wording used to show when the event has passed.</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSSegmentCell</string>
+			<key>key</key>
+			<string>CountUpWording</string>
+			<key>validTitles</key>
+			<array>
+				<string>Started</string>
+				<string>Passed</string>
+				<string>Finished</string>
+			</array>
+			<key>validValues</key>
+			<array>
+				<integer>1</integer>
+				<integer>2</integer>
+				<integer>3</integer>
+			</array>
+			<key>defaults</key>
+			<string>applebetas.ios.tweaks.countdown</string>
+			<key>default</key>
+			<integer>2</integer>
+			<key>PostNotification</key>
+			<string>applebetas.ios.tweaks.countdown.changed</string>
+		</dict>
+		<dict>
+			<key>footerText</key>
+			<string>Make the &quot;Press home to unlock&quot; text appear as soon as you wake the device (on Touch ID-capable devices there is a delay). Appearance options are only available on iOS 10.</string>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>label</key>
+			<string>Appearance</string>
+		</dict>
+		<dict>
+			<key>staticText</key>
+			<string>Secondary calendar text is a new feature introduced in iOS 10 originally intended to let users of alternative calendars see an alternative calendar format (such as Chinese, Hebrew, or Arabic) underneath the Gregorian calendar. Most people don&apos;t use this stock feature, so Countdown can change this text instead. This feature requires iOS 10, and will not appear if you have any tweaks that hide the lock screen clock or date.</string>
+			<key>cell</key>
+			<string>PSLinkListCell</string>
+			<key>detail</key>
+			<string>PSListItemsController</string>
+			<key>label</key>
+			<string>DisplayMode</string>
+			<key>key</key>
+			<string>DisplayMode</string>
+			<key>validTitles</key>
+			<array>
+				<string>&quot;Press home to unlock&quot; text</string>
+				<string>Secondary calendar text</string>
+			</array>
+			<key>shortTitles</key>
+			<array>
+				<string>Unlock hint</string>
+				<string>Secondary calendar</string>
+			</array>
+			<key>validValues</key>
+			<array>
+				<integer>1</integer>
+				<integer>2</integer>
+			</array>
+			<key>defaults</key>
+			<string>applebetas.ios.tweaks.countdown</string>
+			<key>default</key>
+			<integer>1</integer>
+			<key>PostNotification</key>
+			<string>applebetas.ios.tweaks.countdown.changed</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>label</key>
+			<string>Appear Immediately</string>
+			<key>key</key>
+			<string>ImmediateVisible</string>
+			<key>defaults</key>
+			<string>applebetas.ios.tweaks.countdown</string>
+			<key>default</key>
+			<true/>
+			<key>PostNotification</key>
+			<string>applebetas.ios.tweaks.countdown.changed</string>
+		</dict>
+		<dict>
+			<key>label</key>
+			<string>Credits</string>
+			<key>footerText</key>
+			<string>Version 1.1 © AppleBetas Development 2017</string>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+		</dict>
+		<dict>
+			<key>creditOptions</key>
+			<array>
+				<dict>
+					<key>service</key>
+					<string>website</string>
+					<key>username</key>
+					<string>https://www.applebetas.tk/</string>
+				</dict>
+				<dict>
+					<key>service</key>
+					<string>twitter</string>
+					<key>username</key>
+					<string>AppleBetasDev</string>
+				</dict>
+				<dict>
+					<key>service</key>
+					<string>email</string>
+					<key>username</key>
+					<string>applebetas+tmsprq@icloud.com</string>
+				</dict>
+				<dict>
+					<key>service</key>
+					<string>reddit</string>
+					<key>username</key>
+					<string>AppleBetas</string>
+				</dict>
+				<dict>
+					<key>service</key>
+					<string>paypal</string>
+					<key>username</key>
+					<string>AppleBetasPay</string>
+				</dict>
+				<dict>
+					<key>service</key>
+					<string>github</string>
+					<key>username</key>
+					<string>AppleBetas</string>
+				</dict>
+				<dict>
+					<key>service</key>
+					<string>instagram</string>
+					<key>username</key>
+					<string>AppleBetas</string>
+				</dict>
+				<dict>
+					<key>forcedFormattedUsername</key>
+					<string>AppleBetas</string>
+					<key>service</key>
+					<string>googlePlus</string>
+					<key>username</key>
+					<string>101720869338481663975</string>
+				</dict>
+				<dict>
+					<key>forcedFormattedUsername</key>
+					<string>AppleBetas</string>
+					<key>service</key>
+					<string>youtube</string>
+					<key>username</key>
+					<string>channel/UCWNX3hf4I6v3acsZfsMmmsg</string>
+				</dict>
+			</array>
+			<key>avatarImage</key>
+			<string>Avatar-AB.jpg</string>
+			<key>creditPosition</key>
+			<string>Developer</string>
+			<key>creditName</key>
+			<string>AppleBetas</string>
+			<key>height</key>
+			<integer>88</integer>
+			<key>cellClass</key>
+			<string>DDCreditCell</string>
+		</dict>
+		<dict>
+			<key>action</key>
+			<string>openDonate</string>
+			<key>label</key>
+			<string>Donate for my efforts</string>
+			<key>cell</key>
+			<string>PSButtonCell</string>
+		</dict>
+	</array>
+</dict>
+</plist>

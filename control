@@ -1,0 +1,9 @@
+Package: applebetas.ios.tweak.countdown
+Name: Countdown
+Depends: mobilesubstrate, firmware (>= 7.0), preferenceloader
+Version: 1.1
+Architecture: iphoneos-arm
+Description: Replace your Lock Screen's "Press home to unlock" text with a countdown to a date of your choice!
+Maintainer: AppleBetas
+Author: AppleBetas
+Section: Tweaks
